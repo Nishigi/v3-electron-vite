@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import {toRef,toRaw,toRefs} from 'vue'
-// import { ref } from 'vue'
-
+// import { ref,toRef,toRaw,toRefs} from 'vue'
+import { useTestStroe } from "../stores";
+const Test=useTestStroe()
 defineProps<{ msg: string }>()
 
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
+  <h1>pinia:{{ Test.age+'-------'+Test.name }}</h1>
 
 </template>
 
